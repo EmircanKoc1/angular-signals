@@ -1,1 +1,13 @@
-Hello world!
+signal number value : {{numberSignal()}}
+<br>
+<button (click)="inrementNumberSignal()">Increment Number Signal</button>
+<br>
+<input #input1 type="number">
+<br>
+<button (click)="setInput1Value()">Set input value</button>
+<br>
+<button (click)="setObjectSignal()">Change object signal</button>
+<br>
+{{objectSignal() | json}}
+<br>
+computed signal : {{computedSignal()}}
