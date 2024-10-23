@@ -2,7 +2,7 @@ signal number value : {{numberSignal()}}
 <br>
 <button (click)="inrementNumberSignal()">Increment Number Signal</button>
 <br>
-<input #input1 type="number">
+<input ngModel [(ngModel)]="number" type="number">
 <br>
 <button (click)="setInput1Value()">Set input value</button>
 <br>
@@ -11,3 +11,6 @@ signal number value : {{numberSignal()}}
 {{objectSignal() | json}}
 <br>
 computed signal : {{computedSignal()}}
+<br>
+<input ngModel (input)="nameChanged()" [(ngModel)]="name" type="text" placeholder="name">
+<input ngModel (input)="surnameChanged()" [(ngModel)]="surname" type="surname" placeholder="name">
